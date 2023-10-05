@@ -1,0 +1,103 @@
+.left-page {
+  background: url(../img/bg-main-desktop.png) center/cover;
+  min-height: 100vh;
+  position: relative;
+  .cards {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 80%;
+    top: 50%;
+    text-transform: uppercase;
+    .card {
+      height: 230px;
+      width: 400px;
+      border-radius: 10px;
+      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+      color: white;
+    }
+    .front-card {
+      background: url("../img/bg-card-front.png") center/cover;
+      position: relative;
+      #front-logo {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 15%;
+        left: 15%;
+      }
+      #card-change {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        bottom: 30%;
+        font-size: 32px;
+        width: 100%;
+        text-align: center;
+      }
+      #name-change {
+        position: absolute;
+        left: 5%;
+        bottom: 10%;
+      }
+      #date-change {
+        position: absolute;
+        right: 5%;
+        bottom: 10%;
+      }
+      .front-card-infos {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+      }
+    }
+    .back-card {
+      background: url("../img/bg-card-back.png") center/cover;
+      margin: 30px 0 0 100px;
+      position: relative;
+      #cvc-change {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 49%;
+        left: 84%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1000px) {
+  .left-page {
+    min-height: 33vh;
+    .cards {
+      top: 80%;
+      left: 50%;
+      .card {
+        height: 150px;
+        width: 250px;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        color: white;
+      }
+      .front-card {
+        #front-logo {
+          top: 20%;
+          left: 20%;
+        }
+        #card-change {
+          font-size: 18px;
+        }
+        #name-change {
+          font-size: 9px;
+        }
+        #date-change {
+          font-size: 9px;
+        }
+      }
+      .back-card {
+        margin: -230px 0 0 70px;
+        z-index: -1;
+      }
+    }
+  }
+}

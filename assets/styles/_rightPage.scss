@@ -1,0 +1,83 @@
+.right-page {
+  position: relative;
+  form {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 60%;
+    .error {
+      color: red;
+      font-size: 12px;
+    }
+    .surname-container,
+    .numbers-container,
+    .date-container,
+    .cvc-container {
+      display: flex;
+      flex-direction: column;
+    }
+    label {
+      text-transform: uppercase;
+      margin-top: 50px;
+    }
+    input {
+      border-radius: 5px;
+      border: 1px solid gray;
+      height: 70px;
+      padding: 10px;
+      margin-top: 10px;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 18px;
+    }
+    #mounth {
+      width: 80%;
+    }
+    #years {
+      width: 80%;
+    }
+    .flex-global {
+      display: grid;
+      grid-template-columns: 60% 40%;
+      .date-container {
+        .input-flex {
+          display: grid;
+          grid-template-columns: 50% 50%;
+        }
+      }
+    }
+    #confirm {
+      width: 100%;
+      height: 70px;
+      margin-top: 20px;
+      border: hidden;
+      background-color: #220930;
+      color: white;
+      transition: 0.3s ease-in;
+      &:hover {
+        border: gray solid 1px;
+        background-color: white;
+        color: black;
+      }
+    }
+  }
+}
+.formHidden {
+  display: none;
+}
+@media screen and (max-width: 1000px) {
+  .right-page {
+    form {
+      top: 300%;
+      left: 50%;
+      label {
+        margin-top: 10px;
+        font-size: 14px;
+      }
+      input {
+        height: 50px;
+        margin-top: 5px;
+        font-size: 12px;
+      }
+    }
+  }
+}
